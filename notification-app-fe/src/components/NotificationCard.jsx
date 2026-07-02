@@ -1,8 +1,13 @@
-import { Card, CardContent, Chip, Stack, Typography } from "@mui/material";
-
+import {
+  Card,
+  CardContent,
+  Chip,
+  Stack,
+  Typography,
+} from "@mui/material";
 export function NotificationCard({ notification }) {
   return (
-    <Card sx={{ mb: 2 }}>
+    <Card>
       <CardContent>
         <Stack spacing={1}>
           <Chip
@@ -16,12 +21,13 @@ export function NotificationCard({ notification }) {
             }
             sx={{ width: "fit-content" }}
           />
-
           <Typography variant="h6">
             {notification.Message}
           </Typography>
-
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+          >
             {notification.Timestamp}
           </Typography>
         </Stack>
